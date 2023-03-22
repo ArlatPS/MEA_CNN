@@ -70,3 +70,9 @@ np.save("y_trn.npy", labels)
 
 np.save("non-responses_tst.npy", zeros_tst)
 np.save("responses_tst.npy", ones_tst)
+
+
+from matplotlib import pyplot as plt
+
+plt.plot(data[15][0])
+plt.show()
