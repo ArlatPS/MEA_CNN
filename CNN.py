@@ -28,8 +28,8 @@ x_val = np.concatenate((zeros_tst[0:zeros_to_validate],ones_tst[0:ones_to_valida
 zeros_tst = zeros_tst[zeros_to_validate:]
 ones_tst = ones_tst[ones_to_validate:]
 y_val = np.concatenate((np.zeros(zeros_to_validate), np.ones(ones_to_validate)))
-batch_size = 4
-epochs = 10
+batch_size = 16
+epochs = 100
 input_shape = 120,3600,1
 print(zeros_tst.shape)
 
@@ -57,7 +57,7 @@ model.add(Dense(200, activation='relu'))
 model.add(Dropout(0.2))
 model.add(Dense(2, activation="sigmoid"))
 
-model.compile(optimizer=keras.optimizers.Adadelta(learning_rate=0.1),loss="sparse_categorical_crossentropy", metrics=['accuracy'])
+model.compile(optimizer=keras.optimizers.Adadelta(learning_rate=0.2),loss="sparse_categorical_crossentropy", metrics=['accuracy'])
 
 print('Model parameters = %d' % model.count_params())
 print(model.summary())
