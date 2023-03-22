@@ -27,7 +27,7 @@ for i in range(N_zeros):
         new_zeros[NZ_count] = non_responses[i]
 
 N_ones = 31;
-N_ones_to_test = 12;
+N_ones_to_test = 14;
 ones_tst = np.zeros((N_ones_to_test, 120,3600))
 ZT_count = -1;
 new_ones = np.zeros((N_ones - N_ones_to_test, 120,3600))
