@@ -74,5 +74,5 @@ np.save("responses_tst.npy", ones_tst)
 
 from matplotlib import pyplot as plt
 
-plt.plot(data[15][0])
+plt.plot(data[10][0])
 plt.show()
