@@ -26,7 +26,7 @@ def binToSec(data, length, bin):
 # get all filenames
 sum_zeros = 0
 sum_ones = 0
-reps = 20
+reps = 3
 
 for i in range(reps):
 
@@ -143,7 +143,7 @@ for i in range(reps):
     pca.fit(np.concatenate((new_ones, new_ones,new_ones, new_ones,new_ones, new_ones,new_ones, new_ones,new_ones, new_ones,new_ones, new_ones,new_ones, new_ones,new_ones, new_ones,)))
 
     start = 3
-    nsets = 10
+    nsets = 20
     nsamp = new_ones.shape[0]
     new_unos = np.zeros((nsets*nsamp, new_ones.shape[1]))
 
@@ -190,7 +190,7 @@ for i in range(reps):
     print(x_trn.shape)
 
     start = 3
-    nsets = 20
+    nsets = 5
     nsamp = x_trn.shape[0]
     new_x = np.zeros((nsets*nsamp, x_trn.shape[1]))
     new_y = np.zeros((nsets*nsamp))
